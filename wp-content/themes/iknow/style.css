@@ -1,0 +1,542 @@
+/*
+Theme Name: Iknow
+Theme URI: http://shtheme.com/demosd/iknow
+Author: Shtheme
+Author URI: https://themeforest.net/user/shtheme
+Description: In 2022, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: iknow
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+    00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+body {
+    color: #333;
+}
+
+.iknow_tm_comments ul li .list_inner .left h3 {
+    text-transform: capitalize;
+}
+
+.iknow_tm_comments ul li .list_inner .left h3 a {
+    text-decoration: none;
+    color: #222;
+}
+
+.iknow_tm_prev_next a {
+    font-size: 18px;
+    padding-top: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+h3.comment-reply-title {
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    font-weight: 700
+}
+
+p.logged-in-as {
+    margin-bottom: 30px;
+}
+
+p.logged-in-as a {
+    text-decoration: none;
+    color: #333;
+}
+
+p.comment-form-cookies-consent {
+    display: none;
+}
+
+.comment-respond form input {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    padding: 25px !important;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 0px;
+    margin-bottom: 25px;
+}
+
+.comment-respond form input::placeholder,
+.comment-respond form textarea::placeholder {
+    color: #333;
+}
+
+.comment-respond form textarea {
+    width: 100%;
+    height: 230px;
+    border-radius: 10px;
+    padding: 25px !important;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    resize: none;
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 0px;
+    margin-bottom: 18px;
+}
+
+.comment-respond form input[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    background-color: #ff451b;
+    padding: 8px 35px !important;
+    border-radius: 10px;
+    white-space: nowrap;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    width: auto;
+}
+
+.comment-respond form input[type="submit"]:hover {
+    background-color: #ffb324;
+}
+
+.iknow_tm_comments .list ul li .short .left span {
+    color: #666;
+}
+
+.iknow_tm_page_wrapper .blog_single_details .share_and_tags .tags span,
+.iknow_tm_page_wrapper .blog_single_details .share_and_tags .share span {
+    color: #333;
+}
+
+.iknow_tm_page_wrapper .blog_single_details .descriptions blockquote {
+    color: #333;
+}
+
+.iknow_tm_prev_next span {
+    color: #333;
+}
+
+.iknow_tm_sidebar .widget_search,
+.iknow_tm_sidebar .recent_posts {
+    display: flow-root;
+    margin-bottom: 60px;
+}
+
+.widget_categories h3.widget-title,
+.widget_tag_cloud h3.widget-title {
+    width: 100%;
+    float: left;
+    background-color: #ff451b;
+    padding: 28px 30px 27px 30px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-size: 21px;
+    color: #fff;
+}
+
+.widget_categories h3.widget-title:after,
+.widget_tag_cloud h3.widget-title:after {
+    content: '\f101';
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.widget_categories ul li {
+    list-style: none;
+    margin: 0px 0px 15px 0px;
+}
+
+.widget_categories ul li a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 700;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.widget_categories ul li a:hover {
+    color: #ff451b;
+}
+
+.widget_categories ul li a:before {
+    content: '\e804';
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    /* font-size: 120%; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    color: #ff451b;
+}
+
+.widget_categories,
+.widget_tag_cloud {
+    margin-bottom: 60px;
+}
+
+.widget_tag_cloud ul.wp-tag-cloud li {
+    margin: 0px 0px 5px 0px;
+    display: inline-block;
+    list-style: none;
+}
+
+.widget_tag_cloud ul.wp-tag-cloud li a {
+    text-decoration: none;
+    color: #15111e;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 14px !important;
+    padding: 3px 25px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.widget_tag_cloud ul.wp-tag-cloud li a:hover {
+    color: #fff;
+    background-color: #ff451b;
+}
+
+.thumbnail-image img {
+    border-radius: 10px;
+    opacity: 1 !important;
+}
+
+.gallery-size-full {
+    display: none;
+}
+
+.iknow_tm_portfolio_single .main_image img,
+.iknow_tm_portfolio_single .maincontent .additional_images ul li .my_image img {
+    opacity: 1 !important;
+}
+
+.iknow_tm_modalbox .news_informations .image {
+    height: 429px;
+}
+
+form .contact_form .iknow_tm_button input[type="submit"] {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    background-color: #ff451b;
+    padding: 17px 50px;
+    border-radius: 10px;
+    white-space: nowrap;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    height: auto;
+}
+
+form .contact_form .iknow_tm_button input[type="submit"]:hover {
+    background-color: #ffb324;
+}
+
+.iknow_tm_modalbox .popup_details .top_image {
+    height: 429px;
+}
+
+.logged-in .iknow_tm_simple_header {
+    top: 32px;
+}
+
+.search-custom form.search {
+    position: relative;
+    max-width: 70%;
+    margin-top: 30px;
+}
+
+.search-custom form.search svg {
+    position: absolute;
+    top: 23px;
+    right: 22px;
+    z-index: 3;
+    color: #fff;
+}
+
+.search-custom .search input[type="text"] {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    width: 100%;
+    color: #7d7789;
+    height: 60px;
+    padding-left: 20px !important;
+    padding-right: 70px !important;
+    border-radius: 10px;
+}
+
+.blog_list div.search-custom .search input[type="submit"] {
+    width: 60px;
+    height: 60px;
+    background-color: #ff451b;
+    text-transform: capitalize;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.p-b100 {
+    padding-bottom: 100px;
+}
+
+.p-t100 {
+    padding-top: 100px;
+}
+
+.section-full {
+    position: relative;
+}
+
+.page-notfound {
+    max-width: 600px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.page-notfound span.title {
+    position: relative;
+    display: block;
+    color: #ff451b;
+    font-size: 250px;
+    line-height: 150px;
+    font-weight: 900;
+    height: 175px;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-bottom: 50px;
+}
+
+.page-notfound p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.page-notfound .iknow_tm_button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: inline-block;
+    background-color: #ff451b;
+    padding: 12px 45px;
+    border-radius: 10px;
+    white-space: nowrap;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    width: auto;
+    float: none;
+    margin-top: 30px;
+}
+
+.page-notfound .iknow_tm_button:hover {
+    background-color: #ffb324;
+}
+
+.iknow_tm_pagination ul li span {
+    margin: 0px 6px 12px 0px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ff451b;
+    color: #fff;
+}
+
+body.dark.page {
+    background-color: #1d1b1b;
+}
+
+.iknow_tm_sidebar .title {
+    background-color: #ff451b;
+}
+
+.iknow_tm_services .service_list ul li .list_inner {
+    text-align: left;
+}
+
+.iknow_tm_services .service_list ul li .list_inner {
+    padding: 48px 40px 48px 40px;
+}
+
+@media(max-width:500px) {
+    .circular_progress_bar ul li {
+        padding-left: 10px;
+    }
+    .circular_progress_bar ul {
+        list-style-type: none;
+        width: 100%;
+        float: left;
+        margin: 0px;
+    }
+}
+
+.iknow_tm_page_wrapper .blog_single_details .share_and_tags {
+    margin-bottom: 70px;
+}
+
+.iknow_tm_page_wrapper .blog_single_details .share_and_tags .tags ul li {
+    margin-right: 10px;
+}
+
+.iknow_tm_sidebar .title,
+.widget_categories h3.widget-title,
+.widget_tag_cloud h3.widget-title {
+    background: none;
+    padding: 0px;
+    color: #111;
+    font-size: 24px;
+}
+
+.iknow_tm_sidebar .title h3 {
+    color: #111;
+    font-size: 24px;
+}
+
+.widget_categories h3.widget-title:after,
+.widget_tag_cloud h3.widget-title:after {
+    display: none !important;
+}
+
+.iknow_tm_sidebar .title h3 i {
+    display: none !important;
+}
+
+.iknow_tm_main_section {
+    width: 100%;
+    height: auto;
+    clear: both;
+    float: left;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 7px 7px 72px rgb(108 99 255 / 10%);
+    padding: 0px 70px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 70px;
+}
+
+body.dark .iknow_tm_main_section {
+    background-color: #494b50;
+    box-shadow: none;
+}
+
+.page-template-home-3-template .iknow_tm_main_section,
+.page-template-home-3-dark .iknow_tm_main_section {
+    padding: inherit;
+    box-shadow: none;
+}
+
+.page-template-home-3-template .iknow_tm_services .service_list ul li .list_inner,
+.page-template-home-3-dark .iknow_tm_services .service_list ul li .list_inner {
+    text-align: center;
+}
+
+.page-template-home-4-template .iknow_tm_content_extra .iknow_tm_animate_section,
+.page-template-home-4-dark .iknow_tm_content_extra .iknow_tm_animate_section {
+    height: 76.5vh;
+}
+
+.page-template-home-6-template .iknow_tm_mainpart_new .iknow_tm_animate_section,
+.page-template-home-6-dark .iknow_tm_mainpart_new .iknow_tm_animate_section {
+    height: 76.5vh;
+}
+
+.page-template-home-5-template .iknow_tm_hero_third,
+.page-template-home-5-dark .iknow_tm_hero_third {
+    height: 76.5vh;
+}
+
+.page-template-home-5-template .iknow_tm_section_new,
+.page-template-home-5-dark .iknow_tm_section_new {
+    margin-bottom: 70px;
+}
+
+.page-template-home-7-template .iknow_tm_hero_fifth,
+.page-template-home-7-dark .iknow_tm_hero_fifth {
+    height: 81vh;
+}
+
+.page-template-home-7-template .iknow_tm_section_new,
+.page-template-home-7-dark .iknow_tm_section_new {
+    margin-bottom: 70px;
+}
+
+.iknow_tm_fixed_content .mainbar {
+    min-height: 600px;
+}
